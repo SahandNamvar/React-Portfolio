@@ -7,19 +7,22 @@ const Navbar = ({ theme, toggleTheme }) => {
       <div className="flex flex-shrink-0 items-center">
         <a
           href="#"
-          className="text-4xl font-medium tracking-wide dark:text-pink-900"
+          className="text-4xl font-medium tracking-wide dark:text-neutral-700"
         >
           Sn
         </a>
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl dark:text-pink-900">
+      <div className="m-8 flex items-center justify-center gap-4 text-2xl dark:text-neutral-700">
         <FaLinkedin />
         <FaGithub />
         <span>
           {theme === "dark" ? (
             <MdOutlineDarkMode onClick={toggleTheme} />
           ) : (
-            <MdDarkMode onClick={toggleTheme} className="dark:text-pink-900" />
+            <MdDarkMode
+              onClick={toggleTheme}
+              className="dark:text-neutral-700"
+            />
           )}
         </span>
       </div>
