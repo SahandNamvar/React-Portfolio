@@ -3,9 +3,8 @@ import { ABOUT_CONTENT } from "../constants";
 const About = () => {
   return (
     <div className="border-b border-neutral-900 pb-4 dark:border-neutral-300">
-      <h1 className="my-20 text-center text-4xl dark:text-neutral-600">
-        {" "}
-        About <span className="text-neutral-500 dark:text-neutral-400">Me</span>
+      <h1 className="my-20 text-center text-4xl dark:text-neutral-500">
+        About <span className="text-neutral-500 dark:text-neutral-300">Me</span>
       </h1>
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2 lg:p-8">
