@@ -9,7 +9,7 @@ const Hero = () => {
             <h1 className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl dark:text-slate-500">
               Sahand Namvar
             </h1>
-            <span className="bg-gradient-to-r from-p from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent dark:from-orange-300 dark:via-slate-500 dark:to-cyan-500 ">
+            <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent dark:from-orange-300 dark:via-slate-500 dark:to-cyan-500 ">
               Full Stack Developer
             </span>
             <p className="my-2 max-w-xl py-6 font-light tracking-tighter dark:text-slate-500">
