@@ -5,6 +5,8 @@ import About from "./components/About";
 import Technologies from "./components/Technologies";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 export const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -36,6 +38,8 @@ export const App = () => {
         <Education />
         <Technologies />
         <Experience />
+        <Projects />
+        <Contact />
       </div>
     </div>
   );

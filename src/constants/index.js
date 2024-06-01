@@ -29,3 +29,20 @@ export const EXPERIENCE_CONTENT = [
     technologies: ["Python", "Pandas", "PyCharm"],
   },
 ];
+
+export const PROJECTS_CONTENT = [
+  {
+    title: "Project 1",
+    img: "https://tecdn.b-cdn.net/img/new/standard/city/041.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    technologies: ["React", "Tailwind CSS", "Node.js"],
+    github: "https://github.com",
+  },
+];
+
+export const CONTACT_CONTENT = {
+  address: "3720 Wendwood Lane, Charlotte, NC 28211",
+  phone: "+1 408-834-3380",
+  email: "sahandnamvar97@gmail.com",
+};
