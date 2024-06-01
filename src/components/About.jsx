@@ -22,11 +22,14 @@ const About = () => {
               {ABOUT_CONTENT}
             </p>
           </div>
-          <button className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 font-semibold rounded p-1  dark:from-orange-300 dark:via-slate-500 dark:to-cyan-500">
-            <span className="flex w-full bg-gray-950 rounded p-2 dark:bg-neutral-100 dark:text-neutral-500">
-              Download CV
-            </span>
-          </button>
+          <div className="flex justify-center lg:justify-start">
+            <button className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 font-semibold rounded p-1  dark:from-orange-300 dark:via-slate-500 dark:to-cyan-500">
+              <span className="flex w-full bg-gray-950 rounded p-2 dark:bg-neutral-100 dark:text-neutral-500
+              hover:bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 hover:text-slate-900 cursor-pointer transition-all duration-300 ease-in-out hover:active:scale-110">
+                Download CV
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

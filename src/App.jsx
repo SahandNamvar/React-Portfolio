@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Technologies from "./components/Technologies";
+import Education from "./components/Education";
 
 export const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -31,6 +32,7 @@ export const App = () => {
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Hero />
         <About />
+        <Education />
         <Technologies />
       </div>
     </div>
