@@ -47,13 +47,13 @@ const Section = ({ title, items, prop }) => (
           <>
             <span
               key={index}
-              className="text-base font-medium hover:bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500
-              hover:text-slate-900 cursor-pointer p-2 rounded-md hover:scale-105 transition-all duration-300 ease-in-out"
+              className="text-base font-medium tracking-tight cursor-pointer p-2 rounded-md hover:scale-105 transition-all duration-300 ease-in-out
+              hover:text-pink-300"
             >
               {item}
             </span>
             {index !== items.length - 1 && (
-              <div className="h-0.5 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 dark:bg-neutral-300" />
+              <div className="h-0.5 bg-gradient-to-r from-slate-200 via-pink-300 to-slate-500 dark:bg-neutral-300" />
             )}
           </>
         ))}
