@@ -19,6 +19,8 @@ import {
   SiPostman,
 } from "react-icons/si";
 import { PiFileCpp } from "react-icons/pi";
+import { IoLogoFirebase } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const TECH_CONTENT = [
   { icon: FaHtml5, label: "HTML", color: "text-orange-700" },
@@ -38,19 +40,41 @@ const TECH_CONTENT = [
   { icon: SiPostman, label: "Postman", color: "text-orange-500" },
   { icon: FaWindows, label: "Windows", color: "text-blue-800" },
   { icon: SiMacos, label: "macOS", color: "text-pink-400" },
+  { icon: IoLogoFirebase, label: "Firebase", color: "text-yellow-500" },
 ];
 
 const Technologies = () => {
   return (
     <div className="border-b border-neutral-900 pb-24 dark:border-neutral-300">
-      <h2 className="my-20 text-center text-4xl dark:text-neutral-500">
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="my-20 text-center text-4xl dark:text-neutral-500"
+      >
         Technologies
-      </h2>
-      <div className="flex overflow-x-scroll gap-4 px-4 py-2">
+      </motion.h2>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex overflow-x-scroll gap-4 px-4 py-2"
+      >
         {TECH_CONTENT.map((tech, index) => {
           const Icon = tech.icon;
           return (
-            <div
+            <motion.div
+              initial={{ y: -10 }}
+              animate={{ y: [10, -10] }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                ease: "linear",
+                repeatType: "reverse",
+                delay: index * 0.1,
+              }}
               key={index}
               className="rounded-2xl border-4 border-neutral-800 p-4 min-w-[100px] max-w-[100px] flex-shrink-0 dark:border-neutral-600"
             >
@@ -61,10 +85,10 @@ const Technologies = () => {
                 />
                 <span className="dark:text-neutral-500">{tech.label}</span>
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import {
 } from "../constants";
 import { FaBook } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const EducationItem = ({ degree, major, university, gpa, year }) => (
   <div className="w-full lg:w-1/2 lg:p-8 p-4">
@@ -22,7 +23,7 @@ const EducationItem = ({ degree, major, university, gpa, year }) => (
         GPA: {gpa}
       </span>
       <div className="flex gap-2 items-center justify-center">
-        <FaUserGraduate className=" text-lime-800" />
+        <FaUserGraduate className=" text-purple-700" />
         <span>{year}</span>
       </div>
     </div>
@@ -78,11 +79,23 @@ const Education = () => {
 
   return (
     <div className="border-b border-neutral-900 pb-4 dark:border-neutral-300">
-      <h2 className="py-20 text-center text-4xl dark:text-neutral-500">
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="py-20 text-center text-4xl dark:text-neutral-500"
+      >
         Education
-      </h2>
+      </motion.h2>
 
-      <div className="flex flex-wrap rounded-2xl border-4 border-neutral-800 dark:text-slate-500">
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex flex-wrap rounded-2xl border-4 border-neutral-800 dark:text-slate-500"
+      >
         <EducationItem
           degree="M.Sc Computer Science"
           major="Software, Systems and Network"
@@ -101,15 +114,21 @@ const Education = () => {
 
         {readMore && <EducationInfo courses={courses} awards={awards} />}
 
-        <div className="w-full flex justify-center m-2">
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 50 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="w-full flex justify-center m-2"
+        >
           <span
-            className="text-center text-slate-400 font-extralight text-sm hover:underline cursor-pointer dark:text-neutral-300"
+            className="text-center text-purple-700 font-light text-sm  font-mono hover:underline cursor-pointer dark:text-neutral-300"
             onClick={handleReadMore}
           >
             {readMore ? "Read Less" : "Read More"}
           </span>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
