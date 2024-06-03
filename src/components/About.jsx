@@ -50,7 +50,7 @@ const About = () => {
             <button className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 font-semibold rounded p-0.5  dark:from-orange-300 dark:via-slate-500 dark:to-cyan-500">
               <span
                 className="flex w-full bg-gray-950 rounded p-2 dark:bg-neutral-100 dark:text-neutral-500
-              hover:text-white cursor-pointer transition-all duration-300 ease-in-out hover:active:bg-slate-800"
+              hover:text-white cursor-pointer transition-all duration-300 ease-in-out hover:active:bg-slate-700"
               >
                 Download CV
               </span>

@@ -32,6 +32,17 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
+
+            <motion.button
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.1, duration: 0.5 }}
+              className="mb-4 p-0.5 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded font-semibold"
+            >
+              <span className=" flex w-full bg-gray-950 p-2 hover:text-white cursor-pointer transition-all duration-300 ease-in-out hover:active:bg-slate-700">
+                Contact Me
+              </span>
+            </motion.button>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
