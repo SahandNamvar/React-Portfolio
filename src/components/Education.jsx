@@ -4,11 +4,20 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { MdOutlineSchool, MdSchool } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
     <div className="border-b border-neutral-900 pb-4 dark:border-neutral-300">
-      <h2 className="py-20 text-center text-4xl">Education</h2>
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="py-20 text-center text-4xl"
+      >
+        Education
+      </motion.h2>
       <div className="flex w-full justify-center">
         <VerticalTimeline>
           <VerticalTimelineElement
