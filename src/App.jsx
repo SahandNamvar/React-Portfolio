@@ -8,6 +8,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -42,6 +43,7 @@ export const App = () => {
         <Projects />
         <Services />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ const Education = () => {
       >
         Education
       </motion.h2>
-      <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center lg:p-8">
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"

@@ -68,7 +68,7 @@ const Services = () => {
   };
 
   return (
-    <div className="border-b border-neutral-900 dark:border-neutral-300">
+    <div className="border-b border-neutral-900 pb-4 dark:border-neutral-300">
       <h2 className="py-20 text-center text-4xl">Services</h2>
       <div className="flex flex-wrap lg:justify-center">
         {servicesData.map((service, index) => (
