@@ -3,6 +3,7 @@ import { AiFillDatabase } from "react-icons/ai";
 import { HiCode } from "react-icons/hi";
 import { FaAndroid, FaHandshake, FaCheck } from "react-icons/fa";
 import { IoIosArrowRoundForward, IoIosClose } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const servicesData = [
   {
@@ -53,7 +54,7 @@ const servicesData = [
       "I am self-disciplined and self-managed",
       "I am a problem solver and critical thinker",
     ],
-    color: "text-purple-600",
+    color: "text-rose-600",
   },
 ];
 
@@ -72,7 +73,12 @@ const Services = () => {
       <div className="flex flex-wrap lg:justify-center">
         {servicesData.map((service, index) => (
           <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8" key={index}>
-            <div className="bg-neutral-800 dark:bg-neutral-200 p-6 rounded-lg shadow-lg">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className="bg-neutral-800 dark:bg-neutral-200 p-6 rounded-lg shadow-lg"
+            >
               <h3 className="text-lg mb-4">{service.title}</h3>
               <div
                 className={`flex items-center hover:scale-105 transform transition-transform cursor-pointer`}
@@ -83,16 +89,20 @@ const Services = () => {
                   {activeIndex === index ? "View Less" : "View More"}
                 </span>
                 {activeIndex === index ? (
-                  <IoIosClose className="text-xl ml-1" />
+                  <IoIosClose className="text-xl ml-1 text-red-500" />
                 ) : (
-                  <IoIosArrowRoundForward className="text-xl ml-1" />
+                  <IoIosArrowRoundForward className="text-2xl ml-1 text-purple-400" />
                 )}
               </div>
               {activeIndex === index && (
                 <div className="mt-3 border-t-2 border-slate-700">
                   <ul className="list-disc items-start pl-1.5 mt-3">
                     {service.details.map((detail, detailIndex) => (
-                      <li className="flex items-center" key={detailIndex}>
+                      <li
+                        className="flex items-center text-sm tracking-tighter mb-2
+                        hover:text-green-600 hover:scale-105"
+                        key={detailIndex}
+                      >
                         <FaCheck className="mr-2 text-green-800 text-xs" />
                         <span>{detail}</span>
                       </li>
@@ -100,7 +110,7 @@ const Services = () => {
                   </ul>
                 </div>
               )}
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>
