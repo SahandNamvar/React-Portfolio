@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 dark:border-neutral-300">
+    <div
+      id="about"
+      className="border-b border-neutral-900 pb-4 dark:border-neutral-300"
+    >
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

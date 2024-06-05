@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 /* Tailwind CSS */
 @tailwind base;
@@ -20,10 +21,35 @@
   font-family: "Orbitron", sans-serif;
 }
 
+.contactsP {
+  font-family: "Kaushan Script", cursive;
+}
+
 * {
   @apply transition-colors duration-200;
 
   &::selection {
     @apply bg-blue-500 text-white;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input::placeholder {
+  opacity: 0.5;
+  color: white;
+}
+
+textarea::placeholder {
+  opacity: 0.5;
+  color: white;
 }

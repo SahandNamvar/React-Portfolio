@@ -32,7 +32,6 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
-
             <motion.button
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
