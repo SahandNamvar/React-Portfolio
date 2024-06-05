@@ -13,27 +13,9 @@ const Footer = () => {
             Sn
           </a>
         </div>
-        <div className="text-xs lg:text-sm tracking-tight font-semibold flex flex-col text-center">
-          <p>&copy; 2024. All rights reserved.</p>
+        <div className="text-xs tracking-tight font-semibold flex flex-wrap text-center lg:flex-col">
+          <p className="mr-2">&copy; 2024. All rights reserved.</p>
           <p>Designed & Developed by Sahand Namvar</p>
-        </div>
-        <div className="flex gap-2 text-xl">
-          <a
-            href="https://www.linkedin.com/in/sahandnamvar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-125 transition-all duration-100 ease-linear cursor-pointer"
-          >
-            <FaLinkedinIn className="hover:text-purple-600 transition-colors duration-0 hover:active:text-white" />
-          </a>
-          <a
-            href="https://github.com/SahandNamvar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-125 transition-all duration-200 ease-linear cursor-pointer"
-          >
-            <FiGithub className="hover:text-purple-600 transition-colors duration-0 hover:active:text-white" />
-          </a>
         </div>
       </div>
     </footer>
