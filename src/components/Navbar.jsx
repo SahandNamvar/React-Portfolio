@@ -4,7 +4,7 @@ import { FiGithub } from "react-icons/fi";
 
 const Navbar = ({ theme, toggleTheme }) => {
   return (
-    <nav className="mb-20 flex items-center justify-between py-6">
+    <nav id="navbar" className="mb-20 flex items-center justify-between py-6">
       <div className="flex flex-shrink-0 items-center hover:text-white transition-colors duration-0">
         <a
           href="/"

@@ -25,6 +25,7 @@ const Contact = () => {
 
   return (
     <motion.div
+      id="contact"
       whileInView={{ opacity: 1, scale: 1 }}
       initial={{ opacity: 0, scale: 0 }}
       transition={{ duration: 1.5 }}

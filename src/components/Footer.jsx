@@ -3,7 +3,7 @@ import { FiGithub } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="py-4 text-neutral-400">
+    <footer id="footer" className="py-4 text-neutral-400">
       <div className="container mx-auto flex justify-between items-center">
         <div className="">
           <a
