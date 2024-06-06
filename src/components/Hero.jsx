@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
 import profilePic from "../assets/kevinRushProfile.png";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -42,7 +43,16 @@ const Hero = () => {
               className="mb-4 p-0.5 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded font-semibold"
             >
               <span className=" flex w-full bg-gray-950 p-2 hover:text-white cursor-pointer transition-all duration-300 ease-in-out hover:active:bg-slate-700">
-                Contact Me
+                <Link
+                  to={"contact"}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-150}
+                  aria-label={`Scroll to contact section`}
+                >
+                  Contact Me{" "}
+                </Link>
               </span>
             </motion.button>
           </div>

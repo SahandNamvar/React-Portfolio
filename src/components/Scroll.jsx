@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { TbArrowDownToArc } from "react-icons/tb";
+import { PiArrowCircleDownFill } from "react-icons/pi";
 import { motion } from "framer-motion";
 
 const Scroll = () => {
@@ -16,14 +16,14 @@ const Scroll = () => {
   ];
 
   const offsets = {
-    hero: { offset: { lg: -225, md: -40, sm: -225 } },
+    hero: { offset: { lg: -225, md: -225, sm: -225 } },
     about: { offset: { lg: -200, md: -70, sm: -150 } },
     education: { offset: { lg: -20, md: -70, sm: -200 } },
     technologies: { offset: { lg: -20, md: -40, sm: -60 } },
-    experience: { offset: { lg: -300, md: -40, sm: -400 } },
-    projects: { offset: { lg: -300, md: -40, sm: -300 } },
-    services: { offset: { lg: -300, md: -40, sm: -60 } },
-    contact: { offset: { lg: -300, md: -40, sm: -550 } },
+    experience: { offset: { lg: -300, md: -300, sm: -400 } },
+    projects: { offset: { lg: -300, md: -300, sm: -300 } },
+    services: { offset: { lg: -300, md: -300, sm: -60 } },
+    contact: { offset: { lg: -300, md: -20, sm: -40 } },
   };
 
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -67,7 +67,7 @@ const Scroll = () => {
       transition={{ duration: 1, delay: 2 }}
       className="fixed bottom-0 right-0 z-10 mb-8 mr-8 lg:bottom-10"
     >
-      <div className="shadow-lg hover:scale-125 transition-transform duration-300 ease-in-out active:scale-150">
+      <div className="shadow-lg hover:scale-125 transition-transform duration-300 ease-in-out active:scale-150 text-slate-300">
         <Link
           to={sections[nextSectionIndex]}
           spy={true}
@@ -77,7 +77,7 @@ const Scroll = () => {
           aria-label={`Scroll to ${sections[nextSectionIndex]} section`}
           onClick={nextSection}
         >
-          <TbArrowDownToArc className="text-4xl" />
+          <PiArrowCircleDownFill className="text-4xl" />
         </Link>
       </div>
     </motion.div>

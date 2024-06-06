@@ -42,7 +42,7 @@ export const PROJECTS_CONTENT = [
 ];
 
 export const CONTACT_CONTENT = {
-  address: "3720 Wendwood Lane, Charlotte, NC 28211",
-  phone: "+1 408-834-3380",
+  address: "Charlotte, NC",
+  phone: "+1 (408) 834-3380",
   email: "sahandnamvar97@gmail.com",
 };
